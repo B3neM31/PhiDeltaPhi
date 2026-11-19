@@ -1,0 +1,1162 @@
+:root {
+  /* Farben aus dem Wappen (Karminrot, Perlblau, Heraldisches Gold, Schwarz & Weiß) */
+  --wappen-rot: #9e1822;
+  --wappen-rot-dunkel: #7c1119;
+  --wappen-blau: #6eb2e4;
+  --wappen-blau-dunkel: #2b6794;
+  --wappen-blau-hintergrund: #f4f8fb;
+  --wappen-gold: #d5bc74;
+  --wappen-gold-dunkel: #b59849;
+  --wappen-gold-hell: #faf6eb;
+
+  --bg-white: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #4a525d;
+  --border-color: #dce3ea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Dezent markierte Platzhalter */
+.placeholder-note {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  background-color: var(--wappen-gold-hell);
+  border: 1px solid var(--wappen-gold);
+  padding: 0.2rem 0.6rem;
+}
+
+/* Kopfzeile & Navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-white);
+  border-bottom: 2px solid var(--wappen-gold);
+}
+
+.header-bar-top {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--wappen-rot) 0%,
+    var(--wappen-rot) 50%,
+    var(--wappen-blau) 50%,
+    var(--wappen-blau) 100%
+  );
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 84px;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+.brand-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border-color);
+  padding-left: 0.95rem;
+}
+
+.brand-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--wappen-rot);
+  line-height: 1.1;
+}
+
+.brand-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--wappen-rot);
+  border-bottom-color: var(--wappen-rot);
+}
+
+.nav-links a.active {
+  font-weight: 600;
+}
+
+.nav-cta {
+  background-color: var(--wappen-rot);
+  color: #ffffff !important;
+  padding: 0.45rem 1.05rem !important;
+  border: 1px solid var(--wappen-rot) !important;
+  font-weight: 600;
+}
+
+.nav-cta:hover,
+.nav-cta.active {
+  background-color: var(--wappen-rot-dunkel);
+  border-color: var(--wappen-rot-dunkel) !important;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Unterseiten-Kopfbereich */
+.page-header {
+  background-color: var(--wappen-blau-hintergrund);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2.75rem 0 2.25rem;
+}
+
+.page-header-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--wappen-blau-dunkel);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 3.2vw, 2.55rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  max-width: 740px;
+  font-size: 1.02rem;
+}
+
+/* Startseite: Einleitungsbereich mit dem ΦΔΦ-Logo */
+.intro-section {
+  padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.intro-subtitle {
+  font-size: 0.9rem;
+  color: var(--wappen-blau-dunkel);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.intro-content h1 {
+  font-size: clamp(2.1rem, 3.6vw, 2.85rem);
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.intro-lead {
+  font-size: 1.08rem;
+  color: var(--text-main);
+  margin-bottom: 1.15rem;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.68rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--wappen-rot);
+  color: #ffffff;
+  border-color: var(--wappen-rot);
+}
+
+.btn-primary:hover {
+  background-color: var(--wappen-rot-dunkel);
+}
+
+.btn-secondary {
+  background-color: var(--bg-white);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--wappen-blau-dunkel);
+  color: var(--wappen-blau-dunkel);
+}
+
+.intro-logo-box {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--wappen-gold);
+  background-color: var(--wappen-blau-hintergrund);
+}
+
+.intro-logo-img {
+  max-width: 190px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.intro-logo-caption {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+/* Startseiten-Übersichtskacheln zu den Unterseiten */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.overview-card {
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--wappen-rot);
+  background-color: var(--bg-white);
+  padding: 1.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overview-card:nth-child(even) {
+  border-top-color: var(--wappen-blau);
+}
+
+.overview-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.overview-card p {
+  font-size: 0.93rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.overview-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wappen-rot);
+}
+
+.overview-link:hover {
+  text-decoration: underline;
+}
+
+/* Allgemeine Sektionen */
+section {
+  padding: 3.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-tinted {
+  background-color: var(--wappen-blau-hintergrund);
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--wappen-gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-heading h2 {
+  font-size: 1.85rem;
+  color: var(--text-main);
+}
+
+.section-heading span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Über uns & Drei Säulen */
+.about-columns {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  margin-bottom: 2.75rem;
+}
+
+.about-columns p {
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.quote-box {
+  background-color: var(--wappen-blau-hintergrund);
+  border-left: 3px solid var(--wappen-blau);
+  padding: 1.5rem 1.75rem;
+}
+
+.quote-box h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+  color: var(--wappen-rot);
+}
+
+.quote-box p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.quote-box p:last-child {
+  margin-bottom: 0;
+}
+
+.pillars-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.pillar-col {
+  padding: 1.75rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.pillar-col:last-child {
+  border-right: none;
+}
+
+.pillar-col-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wappen-blau-dunkel);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.pillar-col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.65rem;
+  color: var(--wappen-rot);
+}
+
+.pillar-col p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Bildergalerien & Fotocluster (schlicht & einheitlich) */
+.photo-row,
+.gallery-grid-3 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.35rem;
+}
+
+.gallery-grid-2 {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-grid-4 {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.photo-figure {
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.photo-figure img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  border-bottom: 2px solid var(--wappen-gold);
+}
+
+.photo-figure.tall img {
+  height: 290px;
+}
+
+.photo-figure.wide img {
+  height: 320px;
+}
+
+.photo-figure figcaption {
+  padding: 0.75rem 0.95rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.photo-figure figcaption strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.cluster-block {
+  margin-top: 3rem;
+}
+
+.cluster-block:first-of-type {
+  margin-top: 2rem;
+}
+
+.cluster-header {
+  margin-bottom: 1.15rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--wappen-rot);
+}
+
+.cluster-header h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.15rem;
+}
+
+.cluster-header p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.photo-slot {
+  border: 1px dashed var(--wappen-gold-dunkel);
+  background-color: var(--wappen-gold-hell);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.photo-slot strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+/* Namenspate */
+.patron-layout {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 2.5rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.portrait-box {
+  border: 1px dashed var(--wappen-gold-dunkel);
+  background-color: var(--wappen-gold-hell);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.portrait-box strong {
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.patron-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.patron-chair {
+  font-size: 0.95rem;
+  color: var(--wappen-rot);
+  font-weight: 600;
+  margin-bottom: 1.15rem;
+}
+
+.patron-details p {
+  margin-bottom: 0.95rem;
+  color: var(--text-main);
+}
+
+.patron-greeting {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--wappen-gold);
+  background-color: var(--wappen-gold-hell);
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+}
+
+.history-box {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--wappen-rot);
+  padding: 1.75rem 2rem;
+}
+
+.history-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.history-box p {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Veranstaltungen & Archiv */
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.45rem 1rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: var(--wappen-rot);
+  color: #ffffff;
+  border-color: var(--wappen-rot);
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.event-card {
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--wappen-blau);
+  background-color: var(--bg-white);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-type {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wappen-blau-dunkel);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.event-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.65rem;
+}
+
+.event-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.event-meta {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.85rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.event-meta div {
+  margin-bottom: 0.25rem;
+}
+
+.event-meta strong {
+  color: var(--text-main);
+}
+
+.past-events-box {
+  border: 1px solid var(--border-color);
+  background-color: var(--wappen-blau-hintergrund);
+  padding: 1.75rem;
+}
+
+.past-events-box h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.past-events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--bg-white);
+  font-size: 0.9rem;
+}
+
+.past-events-table th,
+.past-events-table td {
+  border: 1px solid var(--border-color);
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+}
+
+.past-events-table th {
+  background-color: var(--wappen-gold-hell);
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Vorstand & Chronik */
+.board-current-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 720px;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.board-member {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--wappen-rot);
+  padding: 1.5rem 1.35rem;
+}
+
+.board-photo-placeholder {
+  width: 100%;
+  height: 160px;
+  background-color: var(--wappen-gold-hell);
+  border: 1px dashed var(--wappen-gold-dunkel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.board-office {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wappen-rot);
+  font-weight: 600;
+}
+
+.board-office-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.board-member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.board-member p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Chronologisches Vorstands-Archiv */
+.chronicle-box {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+}
+
+.chronicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.chronicle-header h3 {
+  font-size: 1.5rem;
+}
+
+.chronicle-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-small {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.82rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-small:hover {
+  border-color: var(--wappen-rot);
+  color: var(--wappen-rot);
+}
+
+.chronicle-year-item {
+  border-top: 1px solid var(--border-color);
+}
+
+.chronicle-year-item:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chronicle-year-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.95rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.chronicle-year-trigger:hover {
+  background-color: var(--wappen-blau-hintergrund);
+}
+
+.chronicle-year-title {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chronicle-term {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 170px;
+}
+
+.chronicle-inn-tag {
+  font-size: 0.78rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--wappen-blau-hintergrund);
+  color: var(--wappen-blau-dunkel);
+}
+
+.chronicle-inn-tag.kube {
+  background-color: #fdf2f2;
+  border-color: #e6b8bc;
+  color: var(--wappen-rot);
+}
+
+.chronicle-summary {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.chronicle-year-body {
+  display: none;
+  padding: 0.5rem 0.5rem 1.25rem;
+}
+
+.chronicle-year-item.open .chronicle-year-body {
+  display: block;
+}
+
+.chronicle-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.chronicle-role-cell {
+  border: 1px solid var(--border-color);
+  padding: 0.65rem 0.8rem;
+  background-color: var(--bg-white);
+  font-size: 0.85rem;
+}
+
+.chronicle-role-cell strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--wappen-rot);
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+/* Mitgliedschaft */
+.membership-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+}
+
+.membership-text p {
+  margin-bottom: 1rem;
+}
+
+.membership-steps {
+  border: 1px solid var(--border-color);
+  background-color: var(--wappen-blau-hintergrund);
+  padding: 1.75rem;
+}
+
+.membership-steps h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.membership-steps ol {
+  padding-left: 1.25rem;
+}
+
+.membership-steps li {
+  margin-bottom: 0.9rem;
+  font-size: 0.94rem;
+}
+
+.membership-steps li strong {
+  color: var(--wappen-rot);
+}
+
+/* Kontakt */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+}
+
+.contact-address-box {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--wappen-gold);
+  padding: 1.85rem;
+}
+
+.contact-address-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.contact-block {
+  margin-bottom: 1.15rem;
+  font-size: 0.93rem;
+}
+
+.contact-block strong {
+  display: block;
+  color: var(--wappen-rot);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.contact-form {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 1.85rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border-color);
+  font-family: inherit;
+  font-size: 0.94rem;
+  background-color: var(--bg-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--wappen-rot);
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background-color: var(--wappen-blau-hintergrund);
+  border: 1px solid var(--wappen-blau);
+  border-left: 4px solid var(--wappen-rot);
+  display: none;
+}
+
+.form-status strong {
+  display: block;
+  color: var(--wappen-rot);
+  margin-bottom: 0.35rem;
+}
+
+.form-status-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Fußzeile */
+.site-footer {
+  background-color: #181c20;
+  color: #d5dce2;
+  padding: 3rem 0 2rem;
+  font-size: 0.88rem;
+  border-top: 3px solid var(--wappen-gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-col h4 {
+  color: var(--wappen-gold);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #9aa3ad;
+}
+
+/* Responsives Verhalten */
+@media (max-width: 920px) {
+  .intro-grid,
+  .about-columns,
+  .patron-layout,
+  .membership-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid,
+  .pillars-table,
+  .events-list,
+  .photo-row,
+  .gallery-grid-2,
+  .gallery-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .board-current-grid,
+  .chronicle-roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background: var(--bg-white);
+    flex-direction: column;
+    padding: 1.25rem;
+    border-bottom: 2px solid var(--wappen-gold);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .board-current-grid,
+  .chronicle-roles-grid,
+  .footer-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
