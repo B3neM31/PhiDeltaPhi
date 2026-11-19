@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veranstaltungen | Phi Delta Phi – Hanno Kube Inn Heidelberg e.V.</title>
+  <link rel="icon" type="image/png" href="assets/pdp-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-bar-top"></div>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <img src="assets/pdp-logo.png" alt="Logo Phi Delta Phi" class="brand-logo-img" />
+        <div class="brand-text">
+          <span class="brand-title">Phi Delta Phi</span>
+          <span class="brand-subtitle">Hanno Kube Inn Heidelberg e.V.</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü öffnen">Menü</button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="namenspate.html">Namenspate</a>
+        <a href="veranstaltungen.html" class="active">Veranstaltungen</a>
+        <a href="vorstand.html">Vorstand &amp; Chronik</a>
+        <a href="mitgliedschaft.html">Mitgliedschaft</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-subtitle">Vereinsleben &amp; Diskurs</div>
+        <h1>Veranstaltungen, Partner &amp; Chronik</h1>
+        <p>
+          Jahresfeiern, akademische Vortragsabende, Kanzlei-Workshops mit unseren Partnern CMS und Gleiss Lutz sowie Exkursionen des Heidelberger Inns.
+        </p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="filter-bar" role="tablist">
+          <button class="tab-btn active" data-filter="all">Alle Formate</button>
+          <button class="tab-btn" data-filter="wissenschaft">Jahresfeiern &amp; Wissenschaft</button>
+          <button class="tab-btn" data-filter="kanzleien">Kanzleipartner &amp; Workshops</button>
+          <button class="tab-btn" data-filter="exkursionen">Exkursionen &amp; Netzwerk</button>
+        </div>
+
+        <div class="events-list" id="events-grid">
+          <article class="event-card" data-category="wissenschaft">
+            <div>
+              <span class="event-type">Fachvortrag &amp; Arbeitsrecht</span>
+              <h3>Die ersten Schritte der KI-Verordnung im Arbeitsrecht – Betreiber</h3>
+              <p>
+                Fachvortrag und Diskussion zu den praktischen Auswirkungen der europäischen KI-Verordnung auf Arbeitgeber als Betreiber von KI-Systemen, Mitbestimmung und arbeitsrechtliche Umsetzung.
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Format:</strong> Vortragsabend &amp; Diskussion</div>
+              <div><strong>Ort:</strong> Universität Heidelberg</div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="kanzleien">
+            <div>
+              <span class="event-type">Kanzlei-Workshop · Oktober 2026</span>
+              <h3>Kartellrechts-Planspiel bei Gleiss Lutz</h3>
+              <p>
+                Gemeinsame Bearbeitung eines praxisnahen fiktiven Kartellrechtsfalls aus der Perspektive der anwaltlichen Beratung im direkten Austausch mit erfahrenen Praktikerinnen und Praktikern.
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Kooperationspartner:</strong> Gleiss Lutz</div>
+              <div><strong>Schwerpunkt:</strong> Kartellrecht &amp; Beratungspraxis</div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="kanzleien">
+            <div>
+              <span class="event-type">Kanzlei-Workshop · 2025</span>
+              <h3>ESG, Haftungsrisiken und Compliance bei Gleiss Lutz</h3>
+              <p>
+                Fachveranstaltung zu aktuellen Entwicklungen im Bereich Environmental, Social &amp; Governance (ESG), unternehmerischen Haftungsrisiken und modernen Compliance-Anforderungen.
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Kooperationspartner:</strong> Gleiss Lutz</div>
+              <div><strong>Schwerpunkt:</strong> Corporate Governance &amp; Compliance</div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="kanzleien">
+            <div>
+              <span class="event-type">Kanzleipartner · Februar &amp; Oktober 2024</span>
+              <h3>Unternehmensfusion &amp; Praxis-Townhall bei CMS</h3>
+              <p>
+                Einblicke in die M&amp;A-Praxis anhand der Fusion des Unternehmens Weck (Februar 2024) sowie „Speed-Dating“/Townhall-Gesprächsrunden mit Anwältinnen und Anwälten verschiedener Praxisgruppen (Oktober 2024).
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Kooperationspartner:</strong> CMS</div>
+              <div><strong>Schwerpunkt:</strong> M&amp;A / Gesellschaftsrecht &amp; Karriere</div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="wissenschaft">
+            <div>
+              <span class="event-type">Festakt · Oktober 2022 &amp; November 2023</span>
+              <h3>Heidelberger Jahresfeiern in der Alten Aula</h3>
+              <p>
+                Feierliche Jahresfeiern des Inns in der historischen Alten Aula der Universität Heidelberg – unter anderem mit Richter am EuGH Prof. Dr. Thomas von Danwitz (Oktober 2022) und Prof. Dr. Dres. h.c. Rüdiger Wolfrum (November 2023) sowie Veranstaltungen mit Hon.-Prof. Dr. Alexandra Schluck-Amend zum Insolvenzrecht.
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Gäste u. a.:</strong> Prof. Dr. Thomas von Danwitz, Prof. Dr. Rüdiger Wolfrum</div>
+              <div><strong>Ort:</strong> Alte Aula der Universität Heidelberg</div>
+            </div>
+          </article>
+
+          <article class="event-card" data-category="exkursionen">
+            <div>
+              <span class="event-type">Exkursion · September 2023</span>
+              <h3>Besuch des Bundesverfassungsgerichts</h3>
+              <p>
+                Führung durch das Bundesverfassungsgericht in Karlsruhe mit anschließendem einstündigen persönlichen Gespräch mit Bundesverfassungsrichter Prof. Dr. Heinrich Amadeus Wolff.
+              </p>
+            </div>
+            <div class="event-meta">
+              <div><strong>Gesprächspartner:</strong> BVerfR Prof. Dr. Heinrich Amadeus Wolff</div>
+              <div><strong>Ort:</strong> Bundesverfassungsgericht, Karlsruhe</div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Chronologische Tabelle vergangener Veranstaltungen -->
+        <div class="past-events-box">
+          <h3>Chronik vergangener Veranstaltungen &amp; Aktivitäten</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Übersicht unserer Veranstaltungen, Kanzlei-Workshops, Exkursionen und überregionalen Treffen.
+          </p>
+          <table class="past-events-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Zeitraum</th>
+                <th style="width: 48%;">Veranstaltung &amp; Inhalt</th>
+                <th style="width: 30%;">Referent/in bzw. Partner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aktuell</td>
+                <td>Fachvortrag: Die ersten Schritte der KI-Verordnung im Arbeitsrecht – Betreiber</td>
+                <td>Universität Heidelberg</td>
+              </tr>
+              <tr>
+                <td>Oktober 2026</td>
+                <td>Kartellrechts-Planspiel: Bearbeitung eines fiktiven Kartellrechtsfalls aus Perspektive der anwaltlichen Beratung</td>
+                <td>Gleiss Lutz</td>
+              </tr>
+              <tr>
+                <td>Oktober 2026</td>
+                <td>Jahresfeier in München &amp; anschließendes Inn-übergreifendes Organisationstreffen</td>
+                <td>Deutsche Phi Delta Phi Inns</td>
+              </tr>
+              <tr>
+                <td>2025</td>
+                <td>Fachveranstaltung zu ESG, Haftungsrisiken und Compliance-Anforderungen</td>
+                <td>Gleiss Lutz</td>
+              </tr>
+              <tr>
+                <td>Oktober 2024</td>
+                <td>„Speed-Dating“ / Townhall: Kennenlernen verschiedener Praxisbereiche in kurzen Gesprächsrunden</td>
+                <td>CMS</td>
+              </tr>
+              <tr>
+                <td>April 2024</td>
+                <td>Gemeinsame Teilnahme am 74. Deutschen Juristentag im Weißen Saal des Neuen Schlosses in Stuttgart</td>
+                <td>Deutscher Juristentag e.V.</td>
+              </tr>
+              <tr>
+                <td>Februar 2024</td>
+                <td>Praxis-Workshop zur Unternehmensfusion am Beispiel des Unternehmens Weck</td>
+                <td>CMS</td>
+              </tr>
+              <tr>
+                <td>Januar 2024</td>
+                <td>Workshop zur praktischen Umsetzung von KI-Projekten in der anwaltlichen Praxis</td>
+                <td>Gleiss Lutz</td>
+              </tr>
+              <tr>
+                <td>November 2023</td>
+                <td>Feierliche Jahresfeier des Heidelberger Inns in der Alten Aula</td>
+                <td>Prof. Dr. Dres. h.c. Rüdiger Wolfrum</td>
+              </tr>
+              <tr>
+                <td>September 2023</td>
+                <td>Besuch des Bundesverfassungsgerichts mit Führung und einstündigem Fachgespräch</td>
+                <td>Bundesverfassungsrichter Prof. Dr. Wolff</td>
+              </tr>
+              <tr>
+                <td>Juli 2023</td>
+                <td>Vorstellung des Vereins &amp; Erfahrungsberichte zu Auslandsaufenthalten, Stipendien und Netzwerkangeboten</td>
+                <td>Mitglieder &amp; Alumni des Inns</td>
+              </tr>
+              <tr>
+                <td>Laufend</td>
+                <td>Besuch der Antrittsvorlesung und weiterer insolvenzrechtlicher Veranstaltungen</td>
+                <td>Hon.-Prof. Dr. Alexandra Schluck-Amend</td>
+              </tr>
+              <tr>
+                <td>Laufend</td>
+                <td>Austausch mit dem Frankfurter Inn (Aufnahmeveranstaltungen an der Goethe-Universität, Soft-Skill-Kurs bei Covington, Alumni-Gesprächsrunden) sowie Besuch von Executive Director Tim Wheat in Heidelberg</td>
+                <td>Inn Frankfurt a. M. · Covington · Phi Delta Phi International</td>
+              </tr>
+              <tr>
+                <td>Oktober 2022</td>
+                <td>Feierliche Jahresfeier des Heidelberger Inns und Vorstellung des Vorstands</td>
+                <td>Prof. Dr. Thomas von Danwitz (EuGH)</td>
+              </tr>
+              <tr>
+                <td>September 2022</td>
+                <td>Bundestreffen der deutschen Inns mit gemeinsamer Weinwanderung bei Stuttgart</td>
+                <td>Deutsche Phi Delta Phi Inns</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fotodokumentation nach Clustern -->
+        <div style="margin-top: 3.5rem;">
+          <div class="section-heading">
+            <h2>Eindrücke vergangener Veranstaltungen</h2>
+            <span>Jahresfeiern, Gastredner und Exkursionen</span>
+          </div>
+
+          <!-- Cluster 1: Vortragsabende in der Alten Aula Heidelberg -->
+          <div class="cluster-block">
+            <div class="cluster-header">
+              <h3>Jahresfeiern &amp; Vortragsabende in der Alten Aula der Universität Heidelberg</h3>
+              <p>Feierliche Jahresfeiern (u. a. mit Prof. Dr. Thomas von Danwitz und Prof. Dr. Rüdiger Wolfrum) in der historischen Alten Aula.</p>
+            </div>
+            <div class="gallery-grid-4">
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143157_1.jpg" alt="Festvortrag in der Alten Aula Heidelberg" />
+                <figcaption>
+                  <strong>Festvortrag</strong>
+                  Vortrag am Katheder der vollbesetzten Alten Aula.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143157_3.jpg" alt="Gastredner am Katheder der Alten Aula" />
+                <figcaption>
+                  <strong>Jahresfeier</strong>
+                  Ansprache am Katheder neben dem Banner des Heidelberger Inns.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143156.jpg" alt="Dank an den Referenten in der Alten Aula" />
+                <figcaption>
+                  <strong>Dank an den Festredner</strong>
+                  Blumenübergabe in der Alten Aula im Anschluss an den Vortrag.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143157_6.jpg" alt="Auditorium der Alten Aula Heidelberg" />
+                <figcaption>
+                  <strong>Alte Aula Heidelberg</strong>
+                  Blick in das Auditorium während einer Abendveranstaltung.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Cluster 2: Gastredner, Kanzleipartner & Überregionale Festakte -->
+          <div class="cluster-block">
+            <div class="cluster-header">
+              <h3>Kanzleiveranstaltungen &amp; Überregionale Festakte</h3>
+              <p>Kooperationsveranstaltungen (u. a. mit Covington, CMS und Gleiss Lutz) sowie gemeinsame Festabende mit dem Frankfurter Schwester-Inn.</p>
+            </div>
+            <div class="gallery-grid-4">
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143158_7.jpg" alt="Gastvortrag bei einer Kooperationsveranstaltung mit Covington" />
+                <figcaption>
+                  <strong>Kooperationsveranstaltung</strong>
+                  Vortrag im Rahmen der Zusammenarbeit mit Kanzleipartnern wie Covington.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143158_9.jpg" alt="Festrede beim Jubiläumsfestakt" />
+                <figcaption>
+                  <strong>Festakt mit dem Inn Frankfurt</strong>
+                  Festrede von Prof. Dr. Michael Hoffmann-Becking.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143157_7.jpg" alt="Festdinner und Tischrede" />
+                <figcaption>
+                  <strong>Festdinner</strong>
+                  Tischrede und Austausch mit Alumni und Mitgliedern.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143157_4.jpg" alt="Programmheft Jubiläumsfestakt" />
+                <figcaption>
+                  <strong>Inn-übergreifender Austausch</strong>
+                  Gemeinsamer Besuch von Festakten der deutschen Schwester-Inns.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Cluster 3: Exkursionen (Bundesverfassungsgericht & Deutscher Juristentag) -->
+          <div class="cluster-block">
+            <div class="cluster-header">
+              <h3>Exkursionen: Bundesverfassungsgericht (Sept. 2023) &amp; 74. Deutscher Juristentag (April 2024)</h3>
+              <p>Besuch bei Bundesverfassungsrichter Prof. Dr. Wolff in Karlsruhe sowie Einladung zum Deutschen Juristentag in Stuttgart.</p>
+            </div>
+            <div class="gallery-grid-4">
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143158_8.jpg" alt="Gruppenbild im Sitzungssaal des Bundesverfassungsgerichts" />
+                <figcaption>
+                  <strong>Bundesverfassungsgericht (Sept. 2023)</strong>
+                  Gruppenbild im Großen Sitzungssaal nach dem Gespräch mit BVerfR Prof. Dr. Wolff.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143158_3.jpg" alt="Richterbank des Bundesverfassungsgerichts" />
+                <figcaption>
+                  <strong>Großer Sitzungssaal</strong>
+                  Blick auf die Richterbank des Bundesverfassungsgerichts.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143158_6.jpg" alt="Ausstellung im Bundesverfassungsgericht" />
+                <figcaption>
+                  <strong>Führung durch das Gericht</strong>
+                  Einblick in die Ausstellung „Richter-Alltag“ in Karlsruhe.
+                </figcaption>
+              </figure>
+
+              <figure class="photo-figure">
+                <img src="assets/photos/IMG_20261115_143159.jpg" alt="74. Deutscher Juristentag im Neuen Schloss Stuttgart" />
+                <figcaption>
+                  <strong>74. Deutscher Juristentag (April 2024)</strong>
+                  Gemeinsame Teilnahme auf Einladung im Weißen Saal in Stuttgart.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Phi Delta Phi · Hanno Kube Inn</h4>
+          <p>
+            Phi Delta Phi – Hanno Kube Inn Heidelberg e.V. (vormals Paul Kirchhof Inn Heidelberg e.V.) an der Ruprecht-Karls-Universität Heidelberg.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Unterseiten</h4>
+          <div class="footer-links">
+            <a href="ueber-uns.html">Über uns &amp; Drei Säulen</a>
+            <a href="namenspate.html">Namenspate Prof. Dr. Hanno Kube</a>
+            <a href="veranstaltungen.html">Veranstaltungen &amp; Archiv</a>
+            <a href="vorstand.html">Vorstand &amp; Chronik</a>
+            <a href="mitgliedschaft.html">Mitgliedschaft &amp; Bewerbung</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Weiterführende Verweise</h4>
+          <div class="footer-links">
+            <a href="https://www.phideltaphi.org" target="_blank" rel="noopener">Internationaler Dachverband (phideltaphi.org)</a>
+            <a href="https://www.uni-heidelberg.de" target="_blank" rel="noopener">Ruprecht-Karls-Universität Heidelberg</a>
+            <a href="https://www.jura.uni-heidelberg.de" target="_blank" rel="noopener">Juristische Fakultät Heidelberg</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Rechtliches &amp; Kontakt</h4>
+          <div class="footer-links">
+            <a href="kontakt.html">Kontakt &amp; E-Mail</a>
+            <a href="kontakt.html#impressum">Impressum</a>
+            <a href="kontakt.html#datenschutz">Datenschutzerklärung</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Phi Delta Phi – Hanno Kube Inn Heidelberg e.V.</span>
+        <span>Ruprecht-Karls-Universität Heidelberg</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
