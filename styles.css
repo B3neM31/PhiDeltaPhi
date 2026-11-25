@@ -769,9 +769,20 @@ section {
   padding: 1.5rem 1.35rem;
 }
 
+.board-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--wappen-gold);
+  margin-bottom: 1rem;
+}
+
 .board-photo-placeholder {
   width: 100%;
-  height: 160px;
+  height: 220px;
   background-color: var(--wappen-gold-hell);
   border: 1px dashed var(--wappen-gold-dunkel);
   display: flex;
@@ -914,15 +925,29 @@ section {
 
 .chronicle-roles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .chronicle-role-cell {
   border: 1px solid var(--border-color);
-  padding: 0.65rem 0.8rem;
+  border-top: 2px solid var(--wappen-gold);
+  padding: 0.75rem;
   background-color: var(--bg-white);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chronicle-member-photo {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  margin-bottom: 0.65rem;
+  border: 1px solid var(--border-color);
 }
 
 .chronicle-role-cell strong {
@@ -930,7 +955,13 @@ section {
   font-size: 0.75rem;
   color: var(--wappen-rot);
   text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-bottom: 0.15rem;
+}
+
+.chronicle-role-cell span {
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 /* Mitgliedschaft */
